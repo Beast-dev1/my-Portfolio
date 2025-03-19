@@ -1,0 +1,22 @@
+{
+  "extends": "@tsconfig/vite-react/tsconfig.json", // Extend Vite + React base config
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "ESNext",
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "moduleResolution": "Node",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "jsx": "react-jsx",
+    "types": ["vite/client"], // Add Vite client types
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"] // Optional: Add path aliases
+    }
+  },
+  "include": ["src"], // Include the src directory
+  "exclude": ["node_modules", "dist"] // Exclude unnecessary files
+}
